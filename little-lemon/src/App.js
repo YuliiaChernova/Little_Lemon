@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <nav>
-        <img src="" alt="Little Lemon Logo">Logo</img>
+        <img src="" alt="Little Lemon Logo"/>
         <span>Hamburger menu</span>
       </nav>
       <main>
@@ -13,7 +13,7 @@ function App() {
         </form>
       </main>
       <footer>
-        <img src="" alt="Little Lemon Logo">Logo</img>
+        <img src="" alt="Little Lemon Logo"/>
         <div>Navigation</div>
         <div>Contact</div>
         <div>Social Media</div>
