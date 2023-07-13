@@ -1,7 +1,7 @@
 .headerFooterContainer {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px 20px 30px 20px;
 }
 
 nav {
@@ -49,18 +49,33 @@ form input:nth-child(4) {
 button {
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #F4E76A;
   border: none;
   width: 150px;
   height: 50px;
   border-radius: 16px;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 form  button {
   margin-top: 30px;
   margin-bottom: 10px;
+}
+
+.primaryButton {
+  background-color: #F4E76A;
+}
+
+.secondaryButton {
+  background-color: #3B6338;
+  color: white;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  background-color: #daa520;
+  transition: 0.3s;
 }
 
 .dateTime {
@@ -69,4 +84,85 @@ form  button {
 
 .dateTime input:first-child {
   margin-right: 50px;
+}
+
+.heroContainer {
+  background-image: url("./assets//main_image.jpg");
+  background-size: cover;
+  min-height: 200px;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+
+  text-align: center;
+}
+
+.heroContainer h1{
+  font-size: 31px;
+  padding-top: 30px;
+}
+
+.heroContainer p{
+  font-size: 16px;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.aboutContainer img{
+  width: 40%;
+}
+
+.aboutTextContainer {
+  width: 45%;
+}
+
+.aboutTextContainer h2 {
+  font-size: 18px;
+}
+
+.aboutTextContainer p {
+  font-size: 12px;
+  line-height: 3;
+}
+
+.dishContainer {
+  min-width: 92px;
+  min-height: 136px;
+  max-width: 25vw !important;
+  background-color: #3B63381A;
+  border-radius: 8px;
+  padding-bottom: 20px;
+}
+
+.dishContainer:first-child {
+  margin-left: 20px;
+}
+
+.dishContainer h2 {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.dishContainer p {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.dishContainer img {
+  min-width: 92px;
+  max-width: 25vw;
+  border-radius: 8px;
+}
+
+.dishesContainer {
+  margin: 30px 50px 30px 50px;
+}
+
+.dishesContainer >div{
+  margin: 0 auto !important;
 }
