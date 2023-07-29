@@ -1,0 +1,224 @@
+@mixin sliderButton {
+  button {
+    background-color: transparent;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+@mixin ButtonTextStyle {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.headerFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px 30px 20px;
+}
+
+nav {
+  height: 5vh;
+
+  img {
+    width: 200px;
+  }
+
+  .menu {
+    color: #F4E76A;
+  }
+}
+
+footer {
+  height: 15vh;
+  background-color: #F4E76A80;
+
+  img {
+    width: 70px;
+  }
+}
+
+form {
+  margin: 10px 30px 40px 30px;
+  padding: 30px;
+  background-color: #3B633833;
+  border-radius: 16px;
+}
+
+form input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  margin: 10px 0 10px 0;
+
+  :nth-child(4) {
+    width: 50%;
+    margin-right: 7%;
+  }
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+form button {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.primaryButton {
+  background-color: #F4E76A;
+}
+
+.secondaryButton {
+  background-color: #3B6338;
+  color: white;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  background-color: #daa520;
+  transition: 0.3s;
+}
+
+.dateTime {
+  display: flex;
+}
+
+.dateTime input:first-child {
+  margin-right: 50px;
+}
+
+.heroContainer {
+  background-image: url("./assets//main_image.jpg");
+  background-size: cover;
+  min-height: 200px;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+
+  text-align: center;
+
+  h1 {
+    font-size: 31px;
+    padding-top: 30px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  img {
+    width: 40%;
+  }
+}
+
+.aboutTextContainer {
+  width: 45%;
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 3;
+  }
+}
+
+.dishContainer {
+  min-width: 25vw;
+  min-height: 136px;
+  background-color: #3B63381A;
+  border-radius: 8px;
+  padding-bottom: 20px;
+
+  h2 {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  img {
+    max-width: 25vw;
+    border-radius: 8px;
+  }
+}
+
+.dishesContainer {
+  margin: 30px 0 30px 0;
+  display: flex;
+  align-items: center;
+
+  @include sliderButton;
+}
+
+.reviewsContainer {
+  display: flex;
+  align-items: center;
+
+  @include sliderButton;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0 30px 0;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  h2 {
+    @include ButtonTextStyle;
+  }
+}
+
+.userContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+
+  img {
+    min-width: 45px;
+    width: 10%;
+    margin-right: 30px;
+  }
+
+  p {
+    display: block;
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
