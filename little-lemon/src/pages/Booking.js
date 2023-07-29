@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 const Booking = () => {
   return (
     <Layout>
-    <main>
+      <main>
         <form>
           <input type="text" id="name" name="name" placeholder="Name*" />
           <input type="text" id="phone" name="phone" placeholder="Phone*" />
@@ -17,7 +17,7 @@ const Booking = () => {
           <button className="primaryButton">Book table</button>
         </form>
       </main>
-  </Layout>
+    </Layout>
   )
 };
 
