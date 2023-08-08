@@ -39,7 +39,7 @@ const Reviews = () => {
           swiperRef.current = swiper;
         }}
       >
-        {reviews.map(r => <SwiperSlide><Review img={r.img} name={r.name} review={r.review} key={Math.random()} /></SwiperSlide>)}
+        {reviews.map(r => <SwiperSlide key={Math.random()}><Review img={r.img} name={r.name} review={r.review} /></SwiperSlide>)}
       </Swiper>
       <button onClick={() => swiperRef.current?.slideNext()}>
         <FontAwesomeIcon icon={faChevronRight} />

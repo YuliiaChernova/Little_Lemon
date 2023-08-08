@@ -59,7 +59,7 @@ const Dishes = () => {
           swiperRef.current = swiper;
         }}
       >
-        {dishes.map(d => <SwiperSlide><Dish title={d.title} url={d.url} description={d.description} key={Math.random()} /></SwiperSlide>)}
+        {dishes.map(d => <SwiperSlide key={Math.random()}><Dish title={d.title} url={d.url} description={d.description} /></SwiperSlide>)}
       </Swiper>
       <button onClick={() => swiperRef.current?.slideNext()}>
         <FontAwesomeIcon icon={faChevronRight} />

@@ -20,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   padding: 30px 20px 30px 20px;
+  min-height: 100px;
 }
 
 nav {
@@ -31,6 +32,9 @@ nav {
 
   .menu {
     color: #F4E76A;
+    >button:first-child {
+      width: 60px;
+    }
   }
 }
 
@@ -43,14 +47,29 @@ footer {
   }
 }
 
-form {
+.bookingContainer {
   margin: 10px 30px 40px 30px;
   padding: 30px;
   background-color: #3B633833;
   border-radius: 16px;
+
+  .header {
+    font-size: 32px;
+    text-align: center;
+    color: #3B6338;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
-form input {
+.bookingContainer input {
   width: 100%;
   height: 40px;
   border: none;
@@ -76,7 +95,7 @@ button {
   cursor: pointer;
 }
 
-form button {
+.bookingContainer button {
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -104,10 +123,15 @@ form button {
   margin-right: 50px;
 }
 
+.dateTime-error div:first-child {
+  margin-right: 55px;
+}
+
 .heroContainer {
-  background-image: url("./assets//main_image.jpg");
+  background-image: url('./assets//main_image.jpg');
   background-size: cover;
   min-height: 200px;
+  padding: 40px 0 70px 0;
 
   text-transform: uppercase;
   font-weight: bold;
@@ -122,6 +146,7 @@ form button {
 
   p {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 
   a {
@@ -170,7 +195,7 @@ form button {
   }
 
   img {
-    max-width: 25vw;
+    min-width: 25vw;
     border-radius: 8px;
   }
 }
@@ -220,5 +245,26 @@ form button {
     display: block;
     font-size: 18px;
     margin-top: 0;
+  }
+}
+
+.fieldError {
+  font-size: 12px;
+  color: #cc0000;
+  width: 100%;
+}
+
+.timePicker {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  >button:first-child {
+    margin: 0;
+    text-transform: none;
+    font-weight: 400;
+    color: #718096;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    text-align: start;
   }
 }
