@@ -10,26 +10,26 @@ import review_photo from '../assets/review_photo.jpg';
 
 const reviews = [
   {
-    name: "Sully",
+    name: 'Sully',
     img: review_photo,
-    review: "Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor."
+    review: 'Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor.'
   },
   {
-    name: "Olha",
+    name: 'Olha',
     img: review_photo,
-    review: "Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor."
+    review: 'Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor.'
   },
   {
-    name: "Jack",
+    name: 'Jack',
     img: review_photo,
-    review: "Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor."
+    review: 'Lorem ipsum dolor. Lorem ipsum dolor. Lorem ipsum dolor.'
   },
 ]
 
 const Reviews = () => {
   const swiperRef = useRef();
   return (
-    <div className="reviewsContainer">
+    <div className='reviewsContainer'>
       <button onClick={() => swiperRef.current?.slidePrev()}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>

@@ -3,8 +3,8 @@ import footer_logo from '../assets/footer_logo.png';
 
 const Footer = () => {
   return (
-    <footer className="headerFooterContainer">
-      <img src={footer_logo} alt="Little Lemon Logo" />
+    <footer className='headerFooterContainer'>
+      <img src={footer_logo} alt='Little Lemon Logo' />
       <div>
         <h3>Navigation</h3>
         <p>Menu</p>

@@ -14,33 +14,33 @@ import salad from '../assets/salad.jpg';
 
 const dishes = [
   {
-    title: "Pizza",
-    description: "Pizza description",
+    title: 'Pizza',
+    description: 'Pizza description',
     url: pizza,
   },
   {
-    title: "Pasta",
-    description: "Pasta description",
+    title: 'Pasta',
+    description: 'Pasta description',
     url: pasta,
   },
   {
-    title: "Salad",
-    description: "Salad description",
+    title: 'Salad',
+    description: 'Salad description',
     url: salad,
   },
   {
-    title: "Pizza 2",
-    description: "Pizza description",
+    title: 'Pizza 2',
+    description: 'Pizza description',
     url: pizza,
   },
   {
-    title: "Pasta 2",
-    description: "Pasta description",
+    title: 'Pasta 2',
+    description: 'Pasta description',
     url: pasta,
   },
   {
-    title: "Salad 2",
-    description: "Salad description",
+    title: 'Salad 2',
+    description: 'Salad description',
     url: salad,
   }
 ];
@@ -48,7 +48,7 @@ const dishes = [
 const Dishes = () => {
   const swiperRef = useRef();
   return (
-    <div className="dishesContainer">
+    <div className='dishesContainer'>
       <button onClick={() => swiperRef.current?.slidePrev()}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
