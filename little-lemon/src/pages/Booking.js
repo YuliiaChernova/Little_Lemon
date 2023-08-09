@@ -58,14 +58,14 @@ const Booking = ({
     <Layout>
       <main>
         <form className='bookingContainer' onSubmit={formik.handleSubmit}>
-          <input type="text" id="name" name="name" placeholder="Name*"  {...formik.getFieldProps('name')} />
+          <input type='text' id='name' name='name' placeholder='Name*'  {...formik.getFieldProps('name')} />
           {isError('name') && <FieldError>{formik.errors.name}</FieldError>}
-          <input type="text" id="phone" name="phone" placeholder="Phone*" {...formik.getFieldProps('phone')} />
+          <input type='text' id='phone' name='phone' placeholder='Phone*' {...formik.getFieldProps('phone')} />
           {isError('phone') && <FieldError>{formik.errors.phone}</FieldError>}
-          <input type="text" id="email" name="email" placeholder="Email*" {...formik.getFieldProps('email')} />
+          <input type='text' id='email' name='email' placeholder='Email*' {...formik.getFieldProps('email')} />
           {isError('email') && <FieldError>{formik.errors.email}</FieldError>}
-          <div className="dateTime">
-            <input type="text" id="date" name="date" placeholder="Booking date*" {...formik.getFieldProps('date')} />
+          <div className='dateTime'>
+            <input type='text' id='date' name='date' placeholder='Booking date*' {...formik.getFieldProps('date')} />
             <div className='timePicker'>
               <TimePicker
                 displayedTime={formik.values.time}
@@ -78,13 +78,13 @@ const Booking = ({
             {isError('time') && <FieldError>{formik.errors.time}</FieldError>}
             {isError('date') && <FieldError>{formik.errors.date}</FieldError>}
           </div>
-          <input type="text" id="adults" name="adults" placeholder="Number of adults*" {...formik.getFieldProps('adults')} />
+          <input type='text' id='adults' name='adults' placeholder='Number of adults*' {...formik.getFieldProps('adults')} />
           {isError('adults') && <FieldError>{formik.errors.adults}</FieldError>}
-          <input type="text" id="children" name="children" placeholder="Number of children*" {...formik.getFieldProps('children')} />
+          <input type='text' id='children' name='children' placeholder='Number of children*' {...formik.getFieldProps('children')} />
           {isError('children') && <FieldError>{formik.errors.children}</FieldError>}
           <RadioComponent currentValue={formik.values.location} setFieldValue={e => formik.setFieldValue('location', e)} values={locationValues} name='locationRadio' />
           {submitError && <FieldError>{submitError}</FieldError>}
-          <button className="primaryButton">Book table</button>
+          <button className='primaryButton'>Book table</button>
         </form>
       </main>
     </Layout>
