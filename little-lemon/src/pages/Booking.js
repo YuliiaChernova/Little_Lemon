@@ -58,7 +58,7 @@ const Booking = ({
     <Layout>
       <main>
         <form className='bookingContainer' onSubmit={formik.handleSubmit}>
-          <input type='text' id='name' name='name' placeholder='Name*'  {...formik.getFieldProps('name')} />
+          <input type='text' id='name' name='name' data-testid='name-input' placeholder='Name*'  {...formik.getFieldProps('name')} />
           {isError('name') && <FieldError>{formik.errors.name}</FieldError>}
           <input type='text' id='phone' name='phone' placeholder='Phone*' {...formik.getFieldProps('phone')} />
           {isError('phone') && <FieldError>{formik.errors.phone}</FieldError>}
@@ -84,7 +84,7 @@ const Booking = ({
           {isError('children') && <FieldError>{formik.errors.children}</FieldError>}
           <RadioComponent currentValue={formik.values.location} setFieldValue={e => formik.setFieldValue('location', e)} values={locationValues} name='locationRadio' />
           {submitError && <FieldError>{submitError}</FieldError>}
-          <button className='primaryButton'>Book table</button>
+          <button className='primaryButton' data-testid='form-submit-btn'>Book table</button>
         </form>
       </main>
     </Layout>

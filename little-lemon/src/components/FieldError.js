@@ -2,7 +2,7 @@ import React from 'react';
 
 const FieldError = ({children}) => {
   return (
-    <div className='fieldError'>{children}</div>
+    <div className='fieldError' data-testid='field-error'>{children}</div>
   )
 };
 
