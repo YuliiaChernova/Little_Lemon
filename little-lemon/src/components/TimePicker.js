@@ -9,8 +9,9 @@ import {
 const TimePicker = ({ displayedTime, items, setFieldValue }) => {
   return (
     <Menu>
-      <MenuButton>
-        {displayedTime || 'Booking time*'}
+      <label for='time'>Booking Time*</label>
+      <MenuButton id='time'>
+        {displayedTime}
       </MenuButton>
       <MenuList defaultValue={items[0]} title='' type='radio'>
         {items.map(i => <MenuItem value={i} key={Math.random()} onClick={setFieldValue}>{i}</MenuItem>)}

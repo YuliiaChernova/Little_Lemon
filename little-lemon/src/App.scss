@@ -71,16 +71,23 @@ footer {
 
 .bookingContainer input {
   width: 100%;
-  height: 40px;
+  display: block;
+  height: 30px;
   border: none;
   border-bottom: 1px solid black;
   background: transparent;
-  margin: 10px 0 10px 0;
+  margin-bottom: 10px;
 
   :nth-child(4) {
     width: 50%;
     margin-right: 7%;
   }
+}
+
+.bookingContainer label {
+  color: #00000080;
+  display: block;
+  width: 100%;
 }
 
 button {
@@ -96,12 +103,21 @@ button {
 }
 
 .bookingContainer button {
-  margin-top: 30px;
   margin-bottom: 10px;
+  width: 100%;
+
+  :first-child {
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    border-radius: 0;
+    margin-left: 10%;
+  }
 }
 
 .primaryButton {
   background-color: #F4E76A;
+  max-width: 200px;
+  margin: 20px auto !important;
 }
 
 .secondaryButton {
@@ -117,6 +133,7 @@ button {
 
 .dateTime {
   display: flex;
+  align-items: space-between;
 }
 
 .dateTime input:first-child {
@@ -125,6 +142,32 @@ button {
 
 .dateTime-error div:first-child {
   margin-right: 55px;
+}
+
+.date {
+  margin-top: 5px;
+}
+
+.timePicker {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  width: 100%;
+
+  >button:first-child {
+    display: block;
+    width: 100%;
+    text-transform: none;
+    font-weight: 400;
+    color: #718096;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    text-align: start;
+  }
+
+  label {
+    padding-left: 10%;
+  }
 }
 
 .heroContainer {
@@ -252,19 +295,4 @@ button {
   font-size: 12px;
   color: #cc0000;
   width: 100%;
-}
-
-.timePicker {
-  display: flex;
-  align-items: center;
-  padding-bottom: 10px;
-  >button:first-child {
-    margin: 0;
-    text-transform: none;
-    font-weight: 400;
-    color: #718096;
-    border-bottom: 1px solid black;
-    border-radius: 0;
-    text-align: start;
-  }
 }

@@ -1,5 +1,4 @@
 import { fireEvent, render, screen, } from '@testing-library/react';
-import { useFormik } from 'formik';
 import { BrowserRouter } from 'react-router-dom';
 import Booking from '../pages/Booking';
 import { mockedInitialState } from './mocks';
