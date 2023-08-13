@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import TimePicker from '../components/TimePicker';
 import FieldError from '../components/FieldError';
 import RadioComponent from '../components/Radio';
+import TextInput from '../components/TextInput';
 import useSubmit from '../hooks/useSubmit';
 import { ACTION_TYPES } from '../constants';
 
@@ -29,7 +30,7 @@ const Booking = ({
     onSubmit: (values) => {
       submit('', values);
       dispatch({ type: ACTION_TYPES.CONFIRM_BOOKING, payload: values });
-      availabilityDispatch({ type: ACTION_TYPES.TRACK_TIME_SLOTS, payload: values.time})
+      availabilityDispatch({ type: ACTION_TYPES.TRACK_TIME_SLOTS, payload: values.time })
     },
     validationSchema: Yup.object({
       name: Yup.string().required('Required'),
@@ -58,14 +59,17 @@ const Booking = ({
     <Layout>
       <main>
         <form className='bookingContainer' onSubmit={formik.handleSubmit}>
-          <input type='text' id='name' name='name' data-testid='name-input' placeholder='Name*'  {...formik.getFieldProps('name')} />
+          <TextInput inputName='name' label='Name*' testId='name-input' {...formik.getFieldProps('name')} />
           {isError('name') && <FieldError>{formik.errors.name}</FieldError>}
-          <input type='text' id='phone' name='phone' placeholder='Phone*' {...formik.getFieldProps('phone')} />
+          <TextInput inputName='phone' label='Phone*' testId='phone-input' {...formik.getFieldProps('phone')} />
           {isError('phone') && <FieldError>{formik.errors.phone}</FieldError>}
-          <input type='text' id='email' name='email' placeholder='Email*' {...formik.getFieldProps('email')} />
+          <TextInput inputName='email' label='Email*' testId='email-input' {...formik.getFieldProps('email')} />
           {isError('email') && <FieldError>{formik.errors.email}</FieldError>}
           <div className='dateTime'>
-            <input type='text' id='date' name='date' placeholder='Booking date*' {...formik.getFieldProps('date')} />
+            <div className='date'>
+              <label for='date'>Booking date*</label>
+              <input type='text' id='date' name='date' {...formik.getFieldProps('date')} />
+            </div>
             <div className='timePicker'>
               <TimePicker
                 displayedTime={formik.values.time}
@@ -78,9 +82,9 @@ const Booking = ({
             {isError('time') && <FieldError>{formik.errors.time}</FieldError>}
             {isError('date') && <FieldError>{formik.errors.date}</FieldError>}
           </div>
-          <input type='text' id='adults' name='adults' placeholder='Number of adults*' {...formik.getFieldProps('adults')} />
+          <TextInput inputName='adults' label='Number of adults*' testId='adults-input' {...formik.getFieldProps('adults')} />
           {isError('adults') && <FieldError>{formik.errors.adults}</FieldError>}
-          <input type='text' id='children' name='children' placeholder='Number of children*' {...formik.getFieldProps('children')} />
+          <TextInput inputName='children' label='Number of children*' testId='children-input' {...formik.getFieldProps('children')} />
           {isError('children') && <FieldError>{formik.errors.children}</FieldError>}
           <RadioComponent currentValue={formik.values.location} setFieldValue={e => formik.setFieldValue('location', e)} values={locationValues} name='locationRadio' />
           {submitError && <FieldError>{submitError}</FieldError>}
